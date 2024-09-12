@@ -2,26 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-outfit)
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.navPill {
+    @apply h-16 rounded-full bg-[#121212] flex items-center gap-4 p-1 text-xl pr-6
+}
+
+.textGradientMain{
+    background: linear-gradient(120deg, #FFF 31.92%, #A891EB 58.23%, #FFF 86.37%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 200% 100%;
+    animation: gradient 5s ease infinite ;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%
+      }
+      50% {
+        background-position: 100% 50%
+      }
+      100% {
+        background-position: 0% 50%
+      }
+}
+
+.textGradientsmall{
+    background: linear-gradient(90deg, #FFF 41.16%, rgba(71, 71, 71, 0.76) 110.41%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.a15gradient{
+    background: linear-gradient(97deg, #433176 -27.63%, #A891EB 79.69%, #322751 158.47%);
+}
+
+.circular-gradient {
+    border-radius: 348px;
+    background: #A891EB;
+    filter: blur(63.272727966308594px);
+}
+
+.rosShadow{
+    box-shadow: -10px -20px 20px 0 rgb(0 0 0 / 0.5);
+}
+
+.galleryShadow{
+    box-shadow: 0px 2px 10px 10px rgb(0 0 0 / 0.2);
+}
+
+.gradient-change{
+    border-radius: 1600px;
+    background: linear-gradient(90deg, rgba(168, 145, 235, 0.38) 2.73%, rgba(106, 141, 61, 0.38) 25.98%, rgba(241, 25, 155, 0.38) 44.88%, rgba(143, 140, 76, 0.38) 72.85%, rgba(78, 104, 241, 0.38) 95.71%);
+    filter: blur(155.25px);
+    background-blend-mode: screen, normal;
 }
