@@ -67,3 +67,15 @@ body {
     filter: blur(155.25px);
     background-blend-mode: screen, normal;
 }
+
+.contactForm label {
+    @apply text-3xl
+}
+
+.contactForm input, textarea {
+    @apply bg-transparent border-b-2 border-white/20 focus:outline-none text-xl
+}
+
+.formStyle {
+    @apply flex flex-col gap-8
+}
