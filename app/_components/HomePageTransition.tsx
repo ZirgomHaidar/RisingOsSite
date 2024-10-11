@@ -12,7 +12,7 @@ export default function HomePageTransition() {
   const scaleX = useTransform(scrollYProgress, [0, 0.4], [1, 0])
   return (
     <motion.div
-      className="left-0 right-0 z-50 flex items-center justify-center"
+      className="left-0 right-0 z-40 flex items-center justify-center"
       style={{ scale, y }}
     >
       <Image src={visual} className="z-20 w-[360px]" alt="visual" />

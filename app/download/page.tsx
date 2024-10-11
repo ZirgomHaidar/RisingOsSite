@@ -45,6 +45,7 @@ export default function page() {
               <span className="inline-flex gap-2">
                 <Link
                   href={`/download/${codename}`}
+                  scroll={true}
                   className="rounded-full bg-[#1E1E1E] p-4"
                 >
                   <Image src={dnButton} alt="dnbutton" />

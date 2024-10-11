@@ -5,18 +5,17 @@ import image3 from "@/public/image3.png"
 import image4 from "@/public/image4.png"
 import aboutbg from "@/public/aboutbg.svg"
 import ghicon from "@/public/ghicon.svg"
-// we make an
 
 export default function page() {
   return (
     <>
-      <div className="relative text-center text-3xl">
-        <Image src={aboutbg} className="absolute z-10 -mt-16" alt="aboutbg" />
+      <Image src={aboutbg} className="absolute z-10" alt="aboutbg" />
+      <div className="relative -mt-8 text-center text-3xl">
         L👀k at our <span className="text-[#A891EB]">talented</span> team,
         driven by innovation and a passion for delivering <br /> exceptional
         features every day!
       </div>
-      <div className="space-y-6">
+      <div className="-mt-16 space-y-6">
         <span className="text-3xl">Core</span>
         <div className="grid gap-20 md:grid-cols-4">
           {[image1, image2, image3, image4].map((item, index) => (

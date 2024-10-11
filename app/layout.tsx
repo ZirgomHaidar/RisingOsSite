@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google"
 import "./globals.css"
 import Navbar from "./_components/Navbar"
 import Footer from "./_components/Footer"
+import Contact from "./_components/Contact"
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -30,6 +31,7 @@ export default function RootLayout({
         <div className="mb-28 mt-28 flex-1">
           <main className="flex flex-col gap-28">{children}</main>
         </div>
+        <Contact />
         <Footer />
       </body>
     </html>

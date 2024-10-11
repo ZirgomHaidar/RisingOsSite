@@ -30,7 +30,7 @@ export default function Home() {
             className="inline-flex gap-12 rounded-full border border-slate-700/25 px-14 py-7"
           >
             <p className="text-2xl">meet rising oS</p>
-            <Image src={arrowicon} className="z-50 w-12" alt="arrowicon" />
+            <Image src={arrowicon} className="z-10 w-12" alt="arrowicon" />
           </Link>
           <div className="a15gradient absolute right-[-6rem] top-16 rotate-[-12deg] rounded-full px-14 py-3 text-3xl text-black">
             Android 15?
