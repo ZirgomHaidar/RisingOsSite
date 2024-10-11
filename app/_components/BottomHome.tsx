@@ -12,7 +12,10 @@ import rosFullLogo from "@/public/rosFullLogo.svg"
 
 export default function BottomHome() {
   return (
-    <div className="relative mt-40 flex h-[990px] flex-col items-center justify-between gap-32 px-16 py-32">
+    <div
+      className="relative mt-40 flex h-[990px] flex-col items-center justify-between gap-32 px-16 py-32"
+      id="about"
+    >
       <Image src={aboutbg} fill className="absolute z-0" alt="aboutbg" />
       <div className="circular-gradient absolute bottom-[-6rem] left-[-6rem] size-[34rem] opacity-5" />
       <div className="z-50 flex justify-between">

@@ -77,5 +77,13 @@ body {
 }
 
 .formStyle {
-    @apply flex flex-col gap-8
+    @apply flex flex-col gap-2 grow
+}
+
+.warning span {
+    @apply text-[#e25f5f]
+}
+
+.active {
+    @apply text-[#A891EB]
 }
