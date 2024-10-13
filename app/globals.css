@@ -11,8 +11,13 @@ body {
 }
 
 .navPill {
-    @apply h-16 rounded-full bg-[#121212] flex items-center gap-4 p-1 text-xl pr-6
+    @apply rounded-full bg-[#121212] flex items-center gap-2 md:gap-4 p-1 md:pr-6 md:w-[12rem]
 }
+
+.navPill p {
+    @apply hidden md:block text-lg w-full
+}
+
 
 .textGradientMain{
     background: linear-gradient(120deg, #FFF 31.92%, #A891EB 58.23%, #FFF 86.37%);
@@ -69,7 +74,7 @@ body {
 }
 
 .contactForm label {
-    @apply text-3xl
+    @apply md:text-3xl text-2xl
 }
 
 .contactForm input, textarea {

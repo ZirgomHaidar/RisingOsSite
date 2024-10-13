@@ -2,8 +2,8 @@ import Accordian from "../_components/Accordian"
 
 export default function page() {
   return (
-    <div className="z-30 -my-20 flex rounded-[2rem] bg-[#060505]">
-      <div className="inline-flex gap-10">
+    <div className="z-30 -my-10 rounded-[2rem] bg-[#060505] md:-my-10 lg:-my-16 xl:-my-24">
+      <div className="inline-flex flex-col lg:flex-row">
         {/* left */}
         <div className="flex flex-col gap-6 rounded-[2rem] bg-[#131313] p-6">
           {/* first red box */}
@@ -51,7 +51,7 @@ export default function page() {
           </div>
         </div>
         {/* part 2 */}
-        <div className="flex w-[180%] flex-col py-10 pr-6">
+        <div className="flex flex-col px-6 py-10 lg:w-[180%]">
           <p className="mb-8 text-3xl">FAQs</p>
           <div className="space-y-4">
             <Accordian title="What is the base of Rising OS ?" preExpand={true}>

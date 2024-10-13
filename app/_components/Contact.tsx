@@ -2,6 +2,7 @@
 import Image from "next/image"
 import blackbglogo from "@/public/blackbglogo.svg"
 import support from "@/public/support.svg"
+import dnArrow from "@/public/dnArrow.svg"
 import disclaimericon from "@/public/disclaimericon.svg"
 import { useState } from "react"
 
@@ -11,7 +12,7 @@ export default function Contact() {
   return (
     <>
       <div
-        className="fixed bottom-6 right-6 z-50"
+        className="fixed bottom-4 right-4 z-50 lg:bottom-8 lg:right-8"
         onClick={() => setVisible(!visible)}
         onMouseEnter={() => setPopup(true)}
         onMouseLeave={() => setPopup(false)}
@@ -19,15 +20,15 @@ export default function Contact() {
         <Image src={support} alt="" className="size-14 cursor-pointer" />
       </div>
       {popup && (
-        <div className="fixed bottom-24 right-6 z-50 rounded-3xl bg-[#A891EB] p-2 text-black">
+        <div className="fixed bottom-7 right-20 z-50 rounded-3xl bg-[#A891EB] p-2 text-black">
           Brother ehhh..!!
         </div>
       )}
       {visible && (
         <div className="fixed inset-0 z-40 bg-gray-900/25 backdrop-blur-md">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="flex bg-black">
-              <div className="flex w-1/2 flex-col justify-between border px-20 py-24">
+          <div className="absolute inset-0 mx-6 flex items-center justify-center">
+            <div className="flex rounded-3xl bg-black">
+              <div className="hidden w-1/2 flex-col justify-between px-20 py-24 lg:flex">
                 {/* circular bg */}
                 <span className="text-wrap text-4xl capitalize">
                   we&apos;d love to hear <br /> from you! ❤️
@@ -46,8 +47,8 @@ export default function Contact() {
                   </span>
                 </div>
               </div>
-              <div className="w-1/2 space-y-16 border px-24 py-20">
-                <span className="text-4xl">Contact Us</span>
+              <div className="space-y-6 px-4 py-6 md:space-y-16 md:px-24 md:py-20 lg:w-1/2">
+                <span className="text-3xl md:text-4xl">Contact Us</span>
                 <form
                   action=""
                   method="post"
@@ -76,9 +77,14 @@ export default function Contact() {
                   <div className="flex justify-end">
                     <button
                       type="submit"
-                      className="navPill w-52 justify-center"
+                      className={
+                        "flex items-center gap-6 rounded-full bg-[#121212] py-1 pl-6 pr-1"
+                      }
                     >
-                      Submit
+                      <h5 className="">Submit</h5>
+                      <div className="rounded-full bg-black p-4">
+                        <Image src={dnArrow} alt="dnArrow" />
+                      </div>
                     </button>
                   </div>
                 </form>

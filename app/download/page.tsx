@@ -7,26 +7,26 @@ export default function page() {
   const codename = "Caiman"
   return (
     <>
-      <div className="text-center text-5xl font-medium">
+      <div className="text-center text-3xl font-medium lg:text-5xl">
         Get Your <span className="text-[#A891EB]">Rising</span> Now
       </div>
       {/* brand selector */}
-      <div className="-mt-16 flex justify-center gap-2">
-        <div className="inline-flex h-14 w-36 items-center justify-center rounded-full border-4 border-[#A891EB40]">
-          <div className="text-2xl text-[#A891EB90] text-white">Motorola</div>
+      <div className="-mt-20 flex flex-wrap justify-center gap-2 sm:-mt-16">
+        <div className="rounded-full border-4 border-[#A891EB40] px-6 py-3">
+          <div className="lg:text-2xl">Motorola</div>
         </div>
-        <div className="inline-flex h-14 w-28 items-center justify-center rounded-full border-4 border-[#A891EB40]">
-          <div className="text-2xl text-[#A891EB90] text-white">Asus</div>
+        <div className="rounded-full border-4 border-[#A891EB40] px-6 py-3">
+          <div className="lg:text-2xl">Asus</div>
         </div>
-        <div className="inline-flex h-14 w-32 items-center justify-center rounded-full border-4 border-[#A891EB40]">
-          <div className="text-2xl text-[#A891EB90] text-white">Google</div>
+        <div className="rounded-full border-4 border-[#A891EB40] px-6 py-3">
+          <div className="lg:text-2xl">Google</div>
         </div>
-        <div className="inline-flex h-14 w-36 items-center justify-center rounded-full border-4 border-[#A891EB40]">
-          <div className="text-2xl text-[#A891EB90] text-white">OnePlus</div>
+        <div className="rounded-full border-4 border-[#A891EB40] px-6 py-3">
+          <div className="lg:text-2xl">OnePlus</div>
         </div>
       </div>
       {/* device grid */}
-      <div className="-mt-10 grid gap-8 md:grid-cols-3">
+      <div className="-mt-16 grid gap-3 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => (
           <div
             className="z-20 flex flex-col justify-between rounded-[3rem] bg-[#131313]"

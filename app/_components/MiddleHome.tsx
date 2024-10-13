@@ -10,26 +10,30 @@ export default function MiddleHome() {
   const { scrollYProgress } = useScroll()
   const y = useTransform(scrollYProgress, [0, 0.4], [480, 0])
   return (
-    <div className="relative z-30 mt-[-25rem] flex h-[800px] items-center justify-between rounded-3xl p-10">
-      <Image src={grainbg} fill alt="grainbg" />
+    <div className="relative z-20 mt-[-25rem] flex h-[800px] items-center justify-between rounded-3xl p-10">
+      <Image src={grainbg} fill alt="grainbg" className="hidden lg:block" />
       <motion.div
         style={{ y }}
-        className="gradient-change absolute z-50 h-[400px] w-full"
+        className="gradient-change absolute z-20 lg:h-[400px] lg:w-full"
       />
-      <motion.div style={{ y }} className="relative">
-        <p className="text-8xl">
+      <motion.div style={{ y }} className="relative hidden lg:block">
+        <p className="text-6xl xl:text-7xl 2xl:text-8xl">
           <span className="font-bold text-[#918CEC]">THE RISE</span>
           <br /> OF YOUR
           <br /> DROID
         </p>
         <Image
           src={blackbglogo}
-          className="rosShadow absolute right-0 top-56 size-40 rounded-full"
+          className="rosShadow absolute right-0 top-36 size-40 rounded-full xl:top-44"
           alt="blackbglogo"
         />
       </motion.div>
-      <motion.div style={{ y }} className="z-50">
-        <Image src={rosbgpurple} alt="rosbgpurple" />
+      <motion.div style={{ y }} className="z-20 hidden lg:block">
+        <Image
+          src={rosbgpurple}
+          alt="rosbgpurple"
+          className="size-64 xl:size-80 2xl:size-full"
+        />
       </motion.div>
     </div>
   )

@@ -27,10 +27,12 @@ export default function Accordian({
   return (
     <>
       <div
-        className="items-center rounded-2xl bg-[#212121] px-6 py-5 text-xl"
+        className="items-center rounded-2xl bg-[#212121] px-6 py-5 sm:text-xl"
         onClick={handleExpanded}
       >
-        <div className={`flex grow justify-between text-2xl font-medium`}>
+        <div
+          className={`flex grow justify-between gap-1 text-xl font-medium sm:text-2xl`}
+        >
           {title}
           <Image
             src={expandIco}

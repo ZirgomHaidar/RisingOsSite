@@ -25,10 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`mx-48 flex min-h-screen flex-col bg-[#0D0D0D] text-white antialiased ${outfit.className}`}
+        className={`mx-4 flex min-h-screen flex-col bg-[#0D0D0D] text-white antialiased xl:mx-10 2xl:mx-48 ${outfit.className}`}
       >
         <Navbar />
-        <div className="mb-28 mt-28 flex-1">
+        <div className="mb-14 mt-14 flex-1 lg:mb-20 lg:mt-20 xl:mb-28 xl:mt-28">
           <main className="flex flex-col gap-28">{children}</main>
         </div>
         <Contact />
