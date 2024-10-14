@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <div className="TOP flex flex-col items-center justify-center space-y-11 text-center capitalize">
-        <div className="inline-flex flex-col text-4xl leading-tight md:text-5xl lg:text-6xl xl:text-6xl">
+        <div className="inline-flex flex-col text-4xl font-medium tracking-wider md:text-5xl lg:text-6xl xl:text-6xl">
           <p className="textGradientMain">
             looking for not the <br />
             average custom rom
@@ -26,7 +26,7 @@ export default function Home() {
         <div className="relative space-x-6">
           <Link
             href="/download"
-            className="inline-flex gap-6 rounded-full border border-slate-700/40 px-8 py-6 sm:gap-12 md:px-14 md:py-7 md:text-2xl"
+            className="inline-flex gap-6 rounded-full border border-slate-700/40 bg-white bg-opacity-0 px-8 py-6 transition-colors duration-200 hover:bg-opacity-5 sm:gap-12 md:px-14 md:py-7 md:text-2xl"
           >
             meet rising oS
             <Image

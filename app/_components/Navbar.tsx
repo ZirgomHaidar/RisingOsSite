@@ -58,7 +58,7 @@ export default function Navbar() {
       </div>
 
       <ul
-        className="fixed left-0 right-0 top-[-1000px] z-50 flex h-full flex-col items-center justify-center gap-8 px-8 py-4 text-xl backdrop-blur-3xl duration-200 ease-in-out md:static md:flex-row md:justify-normal md:gap-4 md:text-base lg:gap-14"
+        className="fixed left-0 right-0 top-[-1000px] z-50 flex h-full flex-col items-center justify-center gap-8 px-8 py-4 text-xl backdrop-blur-3xl duration-200 ease-in-out md:static md:flex-row md:justify-normal md:gap-4 md:text-base md:backdrop-blur-none lg:gap-14"
         ref={navRef}
       >
         <div

@@ -8,7 +8,7 @@ import updatesicon from "@/public/updatesicon.svg"
 
 export default function Footer() {
   return (
-    <div className="z-auto my-3 flex items-center justify-between gap-4 sm:my-0 sm:py-4">
+    <div className="z-40 my-3 flex items-center justify-between gap-4 sm:my-0 sm:py-4">
       <div className="text-md inline-flex flex-col justify-center gap-1 sm:text-lg">
         <Link href="#">
           <Image src={rosFullLogo} width="160" alt="rosFullLogo" />

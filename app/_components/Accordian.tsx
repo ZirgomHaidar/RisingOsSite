@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import expandIco from "@/public/expandIco.svg"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 type accordianProps = {
   title: string
@@ -14,6 +14,7 @@ export default function Accordian({
   children,
   preExpand,
 }: accordianProps) {
+  const accRef = useRef<HTMLDivElement>(null)
   const [expanded, setExpanded] = useState(false)
 
   useEffect(() => {
@@ -37,14 +38,17 @@ export default function Accordian({
           <Image
             src={expandIco}
             alt="expandIco"
-            className={`${expanded ? "rotate-180 transition-transform duration-300" : "rotate-0 transition-transform duration-300"}`}
+            className={`transition-transform duration-200 ${expanded ? "rotate-180" : "rotate-0"}`}
           />
         </div>
-        <div className={`mt-4 font-light ${expanded ? "block" : "hidden"}`}>
-          {children}
+        <div
+          className="overflow-y-hidden transition-all duration-[400ms] ease-in-out"
+          style={{ height: expanded ? accRef.current?.offsetHeight || 0 : 0 }}
+        >
+          <div className={`accContent pt-3`} ref={accRef}>
+            {children}
+          </div>
         </div>
-        {/* {expanded && (
-        )} */}
       </div>
     </>
   )

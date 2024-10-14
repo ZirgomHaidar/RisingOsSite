@@ -12,7 +12,7 @@ export default function Contact() {
   return (
     <>
       <div
-        className="fixed bottom-4 right-4 z-50 lg:bottom-8 lg:right-8"
+        className="fixed bottom-4 right-4 z-30 lg:bottom-8 lg:right-8"
         onClick={() => setVisible(!visible)}
         onMouseEnter={() => setPopup(true)}
         onMouseLeave={() => setPopup(false)}
@@ -27,7 +27,13 @@ export default function Contact() {
       {visible && (
         <div className="fixed inset-0 z-40 bg-gray-900/25 backdrop-blur-md">
           <div className="absolute inset-0 mx-6 flex items-center justify-center">
-            <div className="flex rounded-3xl bg-black">
+            <div className="relative flex rounded-3xl bg-black">
+              <div
+                className="absolute right-10 top-10 hidden cursor-pointer lg:block"
+                onClick={() => setVisible(!visible)}
+              >
+                ❌
+              </div>
               <div className="hidden w-1/2 flex-col justify-between px-20 py-24 lg:flex">
                 {/* circular bg */}
                 <span className="text-wrap text-4xl capitalize">
@@ -48,7 +54,15 @@ export default function Contact() {
                 </div>
               </div>
               <div className="space-y-6 px-4 py-6 md:space-y-16 md:px-24 md:py-20 lg:w-1/2">
-                <span className="text-3xl md:text-4xl">Contact Us</span>
+                <div className="mr-3 flex items-center justify-between">
+                  <span className="text-3xl md:text-4xl">Contact Us</span>
+                  <div
+                    className="block cursor-pointer lg:hidden"
+                    onClick={() => setVisible(!visible)}
+                  >
+                    ❌
+                  </div>
+                </div>
                 <form
                   action=""
                   method="post"
