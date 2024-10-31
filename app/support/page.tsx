@@ -54,31 +54,22 @@ export default function page() {
         <div className="flex flex-col px-6 py-10 lg:w-[180%]">
           <p className="mb-8 text-3xl">FAQs</p>
           <div className="space-y-4">
-            <Accordian title="What is the base of Rising OS ?" preExpand={true}>
+            <Accordian title="What is the base of Rising OS ?" preExpand>
               Why do you care bro. lorem ipsum spam here lorem ipsum dolor
               lalalal whatever the shit it is do your work touch the grass
               ronaldo suuiiii.
             </Accordian>
-            <Accordian
-              title="What is the base of Rising OS ?"
-              preExpand={false}
-            >
+            <Accordian title="What is the base of Rising OS ?">
               Why do you care bro. lorem ipsum spam here lorem ipsum dolor
               lalalal whatever the shit it is do your work touch the grass
               ronaldo suuiiii.
             </Accordian>
-            <Accordian
-              title="What is the base of Rising OS ?"
-              preExpand={false}
-            >
+            <Accordian title="What is the base of Rising OS ?">
               Why do you care bro. lorem ipsum spam here lorem ipsum dolor
               lalalal whatever the shit it is do your work touch the grass
               ronaldo suuiiii.
             </Accordian>
-            <Accordian
-              title="What is the base of Rising OS ?"
-              preExpand={false}
-            >
+            <Accordian title="What is the base of Rising OS ?">
               Why do you care bro. lorem ipsum spam here lorem ipsum dolor
               lalalal whatever the shit it is do your work touch the grass
               ronaldo suuiiii.

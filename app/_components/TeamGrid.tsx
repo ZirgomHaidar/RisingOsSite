@@ -1,25 +1,36 @@
 import Image from "next/image"
-import image1 from "@/public/image1.png"
-import image2 from "@/public/image2.png"
-import image3 from "@/public/image3.png"
-import image4 from "@/public/image4.png"
 import ghicon from "@/public/ghicon.svg"
+import Link from "next/link"
+import { teamList } from "@/types/DeviceModel"
 
-export default function TeamGrid() {
+interface gridProps {
+  list: teamList[]
+}
+
+export default function TeamGrid({ list }: gridProps) {
   return (
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6 xl:grid-cols-4 xl:gap-8">
-      {[image1, image2, image3, image4].map((item, index) => (
+      {list.map((member: teamList, index: number) => (
         <div
           className="z-20 flex flex-col justify-between rounded-[3rem] bg-[#111111]"
           key={index}
         >
-          <Image src={item} alt="image1" className="rounded-[3rem]" />
+          <div className="relative h-[220px]">
+            <Image
+              src={member.profilePic}
+              alt="image1"
+              fill
+              className="absolute rounded-[3rem] object-cover"
+            />
+          </div>
           <div className="flex justify-between px-10 py-6">
             <span className="">
-              <h2>minari penguin</h2>
-              <h5>project lead</h5>
+              <h2>{member.name}</h2>
+              <h5>{member.role}</h5>
             </span>
-            <Image src={ghicon} alt="gh" />
+            <Link href={member.github}>
+              <Image src={ghicon} alt="gh" />
+            </Link>
           </div>
         </div>
       ))}

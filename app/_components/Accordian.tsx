@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react"
 type accordianProps = {
   title: string
   children: string
-  preExpand: boolean
+  preExpand?: boolean
 }
 
 export default function Accordian({
@@ -45,7 +45,7 @@ export default function Accordian({
           className="overflow-y-hidden transition-all duration-[400ms] ease-in-out"
           style={{ height: expanded ? accRef.current?.offsetHeight || 0 : 0 }}
         >
-          <div className={`accContent pt-3`} ref={accRef}>
+          <div className="pt-3" ref={accRef}>
             {children}
           </div>
         </div>
