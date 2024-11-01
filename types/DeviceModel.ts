@@ -9,27 +9,27 @@ export interface deviceModel {
 
 export interface variantDataModel {
     maintainer: string
-			oem: string
-			device: string
-			filename: string
-			download: string
-			timestamp: number
-			md5: string
-			sha256: string
-			size: number
-			version: string
-			buildtype: string
-			forum: string
-			gapps: string
-			firmware:string
-			modem: string
-			bootloader: string
-			recovery: string
-			paypal: string
-			telegram: string
-			dt: string
-			"common-dt": string
-			kernel: string
+    oem: string
+    device: string
+    filename: string
+    download: string
+    timestamp: number
+    md5: string
+    sha256: string
+    size: number
+    version: string
+    buildtype: string
+    forum: string
+    gapps: string
+    firmware:string
+    modem: string
+    bootloader: string
+    recovery: string
+    paypal: string
+    telegram: string
+    dt: string
+    "common-dt": string
+    kernel: string
 }
 
 export type variantProps = {

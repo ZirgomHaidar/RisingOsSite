@@ -10,7 +10,7 @@ export default async function page({
   }
 }) {
   const response = await fetch(
-    `https://ros-api-2to4.onrender.com/device/${params.codename}`,
+    `https://ros-api-2to4.onrender.com/api/v1/device/${params.codename}`,
     {
       cache: "no-store",
     },

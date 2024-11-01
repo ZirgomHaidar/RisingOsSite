@@ -1,7 +1,7 @@
 import { deviceModel } from "@/types/DeviceModel"
 
 export async function fetcheData() {
-  const response = await fetch("https://ros-api-2to4.onrender.com/device/deviceList", {
+  const response = await fetch("https://ros-api-2to4.onrender.com/api/v1/device/deviceList", {
     cache: "no-store",
   })
 
